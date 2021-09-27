@@ -36,4 +36,6 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - run: npm install
     - run: mkdir ./build
-    - run: npm run deploy
+    - run: |
+          git config user.name "Zeskord" && git config user.email "zeskord@gmail.com"
+          npm run deploy
