@@ -33,6 +33,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
     - run: npm install
     - run: mkdir ./build
     - run: npm run deploy
